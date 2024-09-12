@@ -1,5 +1,7 @@
+import FoodCard from "./FoodCard";
+
 let foods = [
-    "Gnocchi", 
+    "Gnocchi",
     "Toasted Sandwich",
     "Tinned Spaghetti",
     "Takoyaki",
@@ -9,12 +11,11 @@ let foods = [
 ];
 
 
-
 export default function FoodList(){
-    return (
+    return(
         <section>
-            {foods.map(food => {
-                return <p>{food}</p>
+            {foods.map((food,index) => {
+                return <FoodCard key={index} foodName={food}/>
             })}
         </section>
     )
